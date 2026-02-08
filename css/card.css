@@ -1,0 +1,112 @@
+:root {
+  --fondo2: #e0eafc;
+  --color1: #3c0000;
+  --color2: #670010;
+  --color3: #960018;
+  --color4: #cb4c46;
+  --color5: #ff8478;
+  --text: #000;
+}
+
+.contenedor {
+  max-width: none;
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.card {
+  background: linear-gradient(145deg, var(--fondo2), #ffffff);
+  color: var(--text);
+  max-width: 420px;
+  width: 100%;
+  border-radius: 25px;
+  box-shadow:
+    0 10px 30px rgba(60, 0, 0, 0.25),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+  text-align: center;
+  position: relative;
+  padding: 25px 20px;
+}
+
+.card::after {
+  content: "❤";
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 1.2rem;
+  color: var(--color5);
+  opacity: 0.6;
+}
+
+.image {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color5), var(--color4));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(150, 0, 24, 0.3);
+}
+
+.image img {
+  width: 55%;
+  height: 55%;
+}
+
+.texto-principal {
+  font-size: 1.5rem;
+  color: var(--color3);
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.btn-si {
+  background: linear-gradient(135deg, var(--color4), var(--color5));
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.btn-si:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(203, 76, 70, 0.4);
+}
+.btn-no {
+  background: linear-gradient(135deg, var(--color2), var(--color3));
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.mensaje-si {
+  display: none;
+  margin-top: 15px;
+  font-weight: bold;
+  color: var(--color3);
+}
+.mensaje-no {
+  display: none;
+  margin-top: 15px;
+  font-weight: bold;
+  color: var(--color2);
+}

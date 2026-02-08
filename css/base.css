@@ -1,0 +1,34 @@
+:root {
+  --fondo: linear-gradient(to right, #232526, #414345);
+  --text-global: azure;
+}
+
+body {
+  background: var(--fondo);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text-global);
+}
+
+/* Estrellas */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(1px 1px at 20% 30%, white, transparent),
+    radial-gradient(1px 1px at 40% 70%, white, transparent),
+    radial-gradient(1px 1px at 60% 20%, white, transparent),
+    radial-gradient(1px 1px at 80% 50%, white, transparent),
+    radial-gradient(1px 1px at 10% 80%, white, transparent),
+    radial-gradient(2px 2px at 25% 60%, #ccc, transparent),
+    radial-gradient(1px 1px at 75% 90%, white, transparent);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  z-index: -1;
+}
