@@ -34,3 +34,24 @@
     transform: translateX(0);
   }
 }
+
+.heart {
+  position: fixed;
+  bottom: 0;
+  font-size: 20px;
+  color: var(--color5);
+  animation: floatUp 2.5s ease-in forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-550px) scale(1.4);
+    opacity: 0;
+  }
+}
